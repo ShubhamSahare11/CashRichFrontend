@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/almendra_sc</item>
+        <item>@font/barriecito</item>
+        <item>@font/chelsea_market</item>
+        <item>@font/chilanka</item>
+        <item>@font/domine</item>
+        <item>@font/eb_garamond</item>
+        <item>@font/itim</item>
+        <item>@font/varela</item>
+    </array>
+</resources>

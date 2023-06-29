@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#27292C"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.5">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#27292C"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollLayout"
+        app:layout_constraintEnd_toEndOf="@+id/scrollLayout"
+        app:layout_constraintStart_toStartOf="@+id/scrollLayout"
+        app:layout_constraintTop_toTopOf="@+id/scrollLayout"
+        app:layout_constraintVertical_bias="0.5">
+
+        <TextView
+            android:id="@+id/signUpFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="First Name"
+            android:fontFamily="@font/domine"
+            android:text="First Name"
+            android:textColor="#7A808A"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPasswordInputLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpFirstNameInputLayout"
+            android:layout_width="356dp"
+            android:layout_height="62dp"
+            android:layout_marginStart="16dp"
+            android:background="#C8C3B7"
+            android:fontFamily="@font/chilanka"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintBottom_toBottomOf="@id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFirstName"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpFirstNameInputText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:allowUndo="true"
+                android:fontFamily="@font/chilanka"
+                android:hint="Enter your first name"
+                android:inputType="text|textPersonName|textNoSuggestions"
+                android:maxLength="15"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpLastNameInputLayout"
+            android:layout_width="356dp"
+            android:layout_height="62dp"
+            android:layout_marginBottom="188dp"
+            android:background="#FFC8C3B7"
+            android:fontFamily="@font/chilanka"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/signUpLastName"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpLastNameInputText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/chilanka"
+                android:hint="Enter your last name"
+                android:inputType="text|textPersonName|textNoSuggestions"
+                android:maxLength="15"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpUsernameInputLayout"
+            android:layout_width="356dp"
+            android:layout_height="62dp"
+            android:background="#FFC8C3B7"
+            android:fontFamily="@font/chilanka"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@id/signUpUsernameText"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpUsernameInputText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:allowUndo="true"
+                android:fontFamily="@font/chilanka"
+                android:hint="Enter the username"
+                android:inputType="text|textPersonName|textNoSuggestions"
+                android:maxLength="15"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/signUpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/eb_garamond"
+            android:text="SignUp"
+            android:textAlignment="center"
+            android:textColor="#FFC8C3B7"
+            android:textSize="46sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.066"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.166" />
+
+
+        <TextView
+            android:id="@+id/signUpLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="last name"
+            android:fontFamily="@font/domine"
+            android:text="Last Name"
+            android:textColor="#7A808A"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.057"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/signUpFirstNameInputLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="411dp"
+            android:layout_height="72dp"
+            android:contentDescription="ImageLogo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+            app:layout_constraintVertical_bias="0.042"
+            app:srcCompat="@drawable/cashrich" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="409dp"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
+
+        <TextView
+            android:id="@+id/signUpUsernameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="user name"
+            android:fontFamily="@font/domine"
+            android:text="Username"
+            android:textColor="#7A808A"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpText"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/signUpPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="user name"
+            android:fontFamily="@font/domine"
+            android:text="Password"
+            android:textColor="#7A808A"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.056"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpUsernameInputLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signUpPasswordInputLayout"
+            android:layout_width="356dp"
+            android:layout_height="62dp"
+            android:background="#C8C3B7"
+            android:fontFamily="@font/chilanka"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="true"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.345"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPassword"
+            app:layout_constraintVertical_bias="0.0"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/signUpPasswordInputText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/chilanka"
+                android:hint="Enter the password"
+                android:inputType="text|textPassword|textNoSuggestions"
+                android:maxLength="15"
+                android:textSize="18sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/signUpButton"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="286dp"
+            android:layout_height="49dp"
+            android:fontFamily="@font/chelsea_market"
+            android:text="Sign Up"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.408"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpLastNameInputLayout"
+            app:layout_constraintVertical_bias="0.114" />
+
+        <TextView
+            android:id="@+id/loginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chelsea_market"
+            android:linksClickable="true"
+            android:text="Have an Account? Login here."
+            android:textColor="#D5C628"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.081"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.853" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
