@@ -6,7 +6,7 @@
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="baseUrl">http://192.168.1.5:8080/cashrich/</string>
+    <string name="baseUrl">http://192.168.1.4:8080/cashrich/</string>
     <string name="userName">userName</string>
     <string name="password">password</string>
     <string name="firstName">firstName</string>
