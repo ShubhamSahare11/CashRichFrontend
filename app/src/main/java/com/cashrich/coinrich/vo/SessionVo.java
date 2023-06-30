@@ -5,8 +5,7 @@ import android.app.Application;
 public class SessionVo extends Application {
     private String sessionId;
     private Long validTill;
-    private String firstName;
-    private String lastName;
+    private String fullName;
 
 
     public String getSessionId() {
@@ -25,19 +24,17 @@ public class SessionVo extends Application {
         this.validTill = validTill;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void destroySession() {
+        this.sessionId = null;
+        this.validTill = null;
+        this.fullName = null;
     }
 }

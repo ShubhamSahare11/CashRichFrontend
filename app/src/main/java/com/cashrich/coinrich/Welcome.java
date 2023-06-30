@@ -1,8 +1,11 @@
 package com.cashrich.coinrich;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -11,6 +14,7 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.cashrich.coinrich.databinding.ActivityWelcomeBinding;
+import com.cashrich.coinrich.vo.SessionVo;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -28,8 +32,8 @@ public class Welcome extends AppCompatActivity {
 
         setSupportActionBar(binding.appBarWelcome.toolbar);
         binding.appBarWelcome.fab.setOnClickListener(view ->
-            Snackbar.make(view, "Welcome", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show());
+                Snackbar.make(view, "Welcome", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show());
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -43,6 +47,16 @@ public class Welcome extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.logout) {
+            ((SessionVo)getApplicationContext()).destroySession();
+            startActivity(new Intent(Welcome.this, LoginActivity.class));
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

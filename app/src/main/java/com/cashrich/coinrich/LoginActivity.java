@@ -22,6 +22,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Date;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -38,6 +39,13 @@ public class LoginActivity extends AppCompatActivity {
 
         binding = LoginScreenBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        String sessionId = ((SessionVo) getApplicationContext()).getSessionId();
+        Long validTill = ((SessionVo) getApplicationContext()).getValidTill();
+        if (null != sessionId && new Date().getTime() < validTill) {
+            startActivity(new Intent(LoginActivity.this, Welcome.class));
+            finish();
+        }
 
         TextInputEditText userNameInput = (TextInputEditText) findViewById(R.id.loginUsernameInputText);
         checkUserNameLength(userNameInput);
@@ -112,8 +120,7 @@ public class LoginActivity extends AppCompatActivity {
         Long validTill = object.optLong("valid_till");
         ((SessionVo) getApplicationContext()).setSessionId(sessionId);
         ((SessionVo) getApplicationContext()).setValidTill(validTill);
-        ((SessionVo) getApplicationContext()).setFirstName(object.optString("firstName"));
-        ((SessionVo) getApplicationContext()).setLastName(object.optString("lastName"));
+        ((SessionVo) getApplicationContext()).setFullName(object.optString("fullName"));
     }
 
     private JSONObject createLoginJsonPayload(String userName, String password) {
